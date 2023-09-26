@@ -5,14 +5,15 @@
 
 :root.theme_light {
  
-}*/
-
+}
+*/
 .page.theme_light {
  --accent-color: #FF8DCB;
   --background-color: #FFF1F7;
   --main-title-color: #FFC2E6;
   --subtitle-color: #353430;
   --decorative-color: #353430;
+  --text-color: #353430;
   --hover-color: #353430;
   --focus-color: #353430;
   --header-image: url(/images/cover-image-light.png);
@@ -26,11 +27,19 @@
   --main-title-color: #FFC2E6;
   --subtitle-color: #353430;
   --decorative-color: #353430;
+  --text-color: #353430;
   --hover-color: #353430;
   --focus-color: #353430;
   --header-image: url(/images/cover-image-light.png);
   }
-  .header__border-title::after {
-    visibility: hidden;
-  }
+  
+  .header__border-title {
+      display: none;
+      visibility: hidden;
+      
+    } 
+    .header__border-title::after {
+      display: none;
+      visibility: hidden;
+    }
 }
