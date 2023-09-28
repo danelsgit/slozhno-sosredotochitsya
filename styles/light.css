@@ -19,7 +19,8 @@
   --focus-color: #353430;
   --header-image: url(/images/cover-image-light.png);
   --main-font: "IBM Plex Mono", monoscape;
-  --display-color: #fff;
+  --display-color: none;
+  --color-footer: #ff8dcb;
 }
 
 @media (prefers-color-scheme: light) {
@@ -34,8 +35,8 @@
   --focus-color: #353430;
   --header-image: url(/images/cover-image-light.png);
   --main-font: "IBM Plex Mono", monoscape;
-  --display-color: #fff;
-
+  --display-color: none;
+  --color-footer: #ff8dcb;
   }
   
 

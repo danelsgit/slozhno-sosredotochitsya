@@ -13,5 +13,6 @@
   --focus-color: #F1B2CE;
   --header-image: url(/images/cover-image-dark.png);
   --main-font: "IBM Plex Mono", monoscape;
-  --display-color: #ff0070;
+  --display-color: flex;
+  --color-footer: #ff0070;
 }
