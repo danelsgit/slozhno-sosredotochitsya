@@ -2,10 +2,8 @@
   Специально для тёмной темы при наличии класса,
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
+*/
 
-:root.theme_dark {
- 
-}*/
 
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
@@ -18,7 +16,7 @@
   --subtitle-color: #000028;
   --decorative-color: #FF0070;
   --text-color: #f1b2ce;
-  --hover-color: #F1B2CE;
+  --hover-color: rgba(255, 0, 112, 0.40);
   --focus-color: #F1B2CE;
   --header-image: url(/images/cover-image-dark.png);
   --main-font: "IBM Plex Mono", monoscape;
@@ -36,18 +34,17 @@
   --subtitle-color: #000028;
   --decorative-color: #FF0070;
   --text-color: #f1b2ce;
-  --hover-color: #F1B2CE;
+  --hover-color: rgba(255, 0, 112, 0.40);
   --focus-color: #F1B2CE;
   --header-image: url(/images/cover-image-dark.png);
   --main-font: "IBM Plex Mono", monoscape;
   --display-color: flex;
   --color-footer: #ff0070;
-  
  }
+
 
   
 } 
-
 
 
 

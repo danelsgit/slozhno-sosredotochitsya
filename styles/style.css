@@ -2,7 +2,10 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background: var(--background-color);
+  background: var(--header-image) no-repeat center;
+  background-color: var(--background-color);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -20,15 +23,18 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 19px;
+  gap: 10px;
   height: 26px;
 }
 
-
+.header__theme-menu-item {
+  height: 23px;
+}
 
 .header__theme-menu-button {
   display: flex;
   border: none;
+  padding: 0px 13px;
   color: var(--decorative-color);
   font-family: var(--main-font);
   font-weight: 400;
@@ -38,31 +44,28 @@
   text-align: center;
   text-transform: lowercase;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
-  border: none;
   display: inline-flex;
-  height: 26px;
-  padding: 0px 13px;
   justify-content: center;
   align-items: center;
+  height: 26px;
+  border: none;
   border: 1px solid var(--decorative-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
   display: inline-flex;
   height: 26px;
-  padding: 0px 13px;
-  justify-content: center;
-  align-items: center;
   border: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--decorative-color);
   outline: none;
-
 }
 
 .decorated-zone {
@@ -73,8 +76,6 @@
   align-items: center;
   padding: 20px;
   color: var(--accent-color);
-  background: var(--header-image) lightgray 50% / cover no-repeat;
-  background-attachment: fixed;
 }
 
 .header__theme-display {
@@ -88,7 +89,7 @@
 .header__theme-display::before {
   content: "rec";
   position: absolute;
-  color: #FF0070;
+  color: #ff0070;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 18px;
@@ -106,9 +107,9 @@
   margin-top: 8px;
   margin-left: 42px;
   border-radius: 100%;
-  fill: #FF0070;
-  background: #FF0070;
-  filter: drop-shadow(0px 0px 4px var(#FF0070));
+  fill: #ff0070;
+  background: #ff0070;
+  filter: drop-shadow(0px 0px 4px #ff0070);
 }
 
 .borders__top-bottom::before {
@@ -155,7 +156,6 @@
     text-shadow: 4px 4px 0px var(--color-footer);
   }
 }
-
 
 .header__title {
   display: flex;
@@ -219,10 +219,8 @@
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  line-height: 23.4px; /* 130% */ 
-
+  line-height: 23.4px; /* 130% */
 }
-
 
 .main__text-shadow {
   text-decoration: none;
@@ -360,7 +358,7 @@
 @media (max-width: 768px) {
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    text-shadow: 4px 4px 0px  var(--color-footer);
+    text-shadow: 4px 4px 0px var(--color-footer);
   }
 }
 @media (max-width: 600px) {
@@ -392,14 +390,13 @@
     width: 100%;
     height: 100%;
   }
-  
+
   .main__images-tape {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
     width: 100%;
     height: 100%;
-    
   }
 
   .main__images-street {
@@ -408,11 +405,10 @@
     width: 100%;
     height: 100%;
   }
- 
 }
 
 @media (max-width: 450px) {
- .decorated-zone,
+  .decorated-zone,
   .footer {
     padding: 10px;
   }
@@ -423,23 +419,18 @@
   }
 }
 
-
-
-@media (max-width: 768px) { 
-
+@media (max-width: 768px) {
   .header__theme-menu {
     display: flex;
-   justify-content: flex-end;
-   align-self: flex-end;
- 
+    justify-content: flex-end;
+    align-self: flex-end;
   }
   .header__theme-menu-list {
     display: flex;
-    flex-direction: column;   
-    margin-bottom: 130px;
-    margin-right: 12px;
-    width: 44px;
+    flex-direction: column;
     gap: 13px;
+    height: auto;
+    margin-bottom: 60px;
   }
 
   .decorated-zone {
@@ -452,13 +443,7 @@
   }
 }
 
-
-
-
-
 @media (min-width: 686px) and (max-width: 768px) {
-
-
   .main__about {
     grid-template-columns: 1fr 2fr;
   }
@@ -470,11 +455,10 @@
   .main__advice {
     grid-template-columns: 1fr 2fr;
   }
-
 }
 
-@media (max-width: 1024px) {
-    .main__why-list {
+@media (max-width: 1023px) {
+  .main__why-list {
     grid-template-columns: 1fr;
   }
 }
@@ -487,9 +471,14 @@
     gap: 50px;
   }
 
+  .header__theme-menu {
+    align-self: center;
+    margin-top: 10px;
+  }
+
   .header__theme-menu-list {
-    margin-bottom: 125px;
-    margin-right: 13px;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   .header__title {
@@ -508,13 +497,13 @@
   }
 
   .main__images {
-    max-width: 354px;
     gap: 10px;
+    max-width: 354px;
   }
 
   .main__images-grid {
-    max-width: 354px;
     row-gap: 10px;
+    max-width: 354px;
   }
 
   .footer {
